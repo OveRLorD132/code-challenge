@@ -1,0 +1,28 @@
+<div class="weather-main-cont">
+  <div class="weather-top-info">
+    <div class="weather-info">{{ weather.location }}</div>
+    <div class="weather-info">{{ formatTime(weather.current_weather.time) }}</div>
+  </div>
+  <div class="weather-lbl">
+    <div class="weather-left">
+      <div class="weather-top">
+        <img class="weather-icon" [src]="getWeatherPicture(weather.current_weather.weathercode)"/>
+        {{ weather.current_weather.temperature }}&#176;
+      </div>
+      <div class="weather-bottom">{{ setWeather(weather.current_weather.weathercode) }}</div>
+    </div>
+    <div class="weather-right">
+      <div class="values-lbl"> Daily Temperature </div>
+      <div class="daily-values">Highest: {{ getHighestTemp() }}&#176;</div>
+      <div class="daily-values">Lowest: {{ getLowestTemp() }}&#176;</div>
+    </div>
+  </div>
+  <h1 style="text-align: start; color: black; align-self: flex-start; margin-left: 25px; margin-bottom: 0;">Weather Hourly</h1>
+  <div class="hours-list">
+    <div class="hour" *ngFor="let tempData of temperatureList">
+      <div class="hour-val">{{ tempData.time }}</div>
+      <div class="temperature-val">{{ tempData.temperature + '&#176;' }}</div>
+      <div class="weather-val">{{ tempData.weather }}</div>
+    </div>
+  </div>
+</div>

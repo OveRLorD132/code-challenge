@@ -1,0 +1,8 @@
+<div class="main-cont">
+  <user-card [userData]="userData" *ngIf="userData" (showOverlay)="showOverlay()" 
+    (showUserLocation)="emitShowLocation($event)"
+  ></user-card>
+  <div class="weather-overlay-cont" *ngIf="overlayIsVisible" (click)="hideOverlay()">
+    <weather-overlay class="weather-main-cont" (click)="stopProp($event)" [temperatureList]="temperatureList" [weather]="weather" [@showWeather] *ngIf="overlayIsVisible === true"/>
+  </div>
+</div>

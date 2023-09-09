@@ -1,0 +1,6 @@
+<img class="close-btn" (click)="mapHide()" src="assets/images/close.png"/>
+<div class="map"
+  leaflet 
+  [leafletOptions]="options"
+  (leafletMapReady)="onMapReady($event)">
+</div>

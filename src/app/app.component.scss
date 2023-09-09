@@ -1,0 +1,21 @@
+.main-line {
+  top: 0;
+  z-index: 2;
+  position: sticky;
+  padding: 25px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 50px);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);;
+  font-size: 18px;
+}
+
+.link {
+  color: black;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}

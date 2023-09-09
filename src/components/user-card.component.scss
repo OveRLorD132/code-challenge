@@ -1,0 +1,85 @@
+$description-grey: #a8a8a8;
+
+@import '../styles/colors.scss';
+
+.card {
+  margin: 2vh;
+  position: relative;
+  padding: 3vh;
+  width: min-content;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  transition: padding .5s ease;
+  &:hover {
+    padding: 4vw;
+  }
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.user-name {
+  font-size: 2rem;
+}
+
+.profile-image {
+  max-width: 12vh;
+  max-height: 12vh;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.info-cont {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.info-left {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.info-lbl {
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.user-data {
+  margin-top: 5px;
+}
+
+.profile-h {
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.weather-btn {
+  background-color: $back-color;
+  width: max-content;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 10px;
+  color: #fff;
+  margin-top: 10px;
+  cursor: pointer;
+  &:hover {
+    background-color: $blue-hover;
+  }
+}
+
+.card-overlay {
+  width: 3vh;
+  height: 3vh;
+  position: absolute;
+  right: 1vh;
+  top: 1vh;
+  cursor: pointer;
+}

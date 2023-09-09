@@ -1,0 +1,115 @@
+@import '../styles/colors.scss';
+
+.weather-main-cont {
+  padding: 25px 0 25px 0;
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  background-color: $grey;
+  color: $text-grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.weather-lbl {
+  color: #fff;
+  padding: 2.5vh;
+  width: calc(100% - 5vh);
+  background-color: $back-color;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.weather-icon {
+  width: 5.5vh;
+  height: 5.5vh;
+  margin-right: 10px;
+}
+
+.weather-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.weather-bottom {
+  max-width: 200px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.weather-top-info {
+  padding: 0 25px 0 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: calc(100% - 50px);
+}
+
+.hours-list {
+  padding: 0 25px 0 25px;
+  margin-top: 20px;
+  font-size: 18px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
+}
+
+.hour {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid $text-grey;
+  border-radius: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.hour-val {
+  font-size: 16px;
+  color: black;
+  font-weight: 600;
+}
+
+.temperature-val {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.weather-val {
+  text-align: center;
+  max-width: 120px;
+  color: $text-grey;
+}
+
+
+.values-lbl {
+  font-size: 24px;
+}
+
+.daily-values {
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .hours-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hour {
+    width: 45%;
+    margin: 5px;
+  }
+}

@@ -1,0 +1,20 @@
+.map {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 4;
+  background-color: #fff;
+}
+
+.close-btn {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  height: 35px;
+  width: 35px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 5;
+  cursor: pointer;
+}

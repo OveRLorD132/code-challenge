@@ -1,0 +1,10 @@
+<div class="weather-overlay-cont" *ngIf="chosenWeather" (click)="hideOverlay()">
+  <weather-overlay [weather]="chosenWeather" (click)="stopProp($event)" 
+    [temperatureList]="chosenWeather.tempList" [@showWeather]
+  />
+</div>
+<div *ngIf="isLoaded">
+  <user-card (showOverlay)="showOverlay($event)" *ngFor="let userData of usersData" 
+    [userData]="userData.profile" [isSaved]="true" [weather]="userData.weather" (showUserLocation)="emitShowLocation($event)"
+  />
+</div>
