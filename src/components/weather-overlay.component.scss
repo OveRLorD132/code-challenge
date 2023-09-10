@@ -103,13 +103,29 @@
 }
 
 @media (max-width: 768px) {
+  .weather-lbl {
+    font-size: 2rem;
+  }
+  .weather-bottom {
+    font-size: 20px;
+  }
+  .values-lbl {
+    font-size: 18px;
+  }
   .hours-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    overflow-y: auto;
+    max-height: 50vh;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 14px;
+    padding: 0 15px 0 15px;
   }
   .hour {
-    width: 45%;
-    margin: 5px;
+    padding: 10px;
+  }
+  .hour-val {
+    font-size: 14px;
+  }
+  .temperature-val {
+    font-size: 24px;
   }
 }
